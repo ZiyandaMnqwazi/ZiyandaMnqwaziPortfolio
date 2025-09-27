@@ -1,0 +1,110 @@
+﻿@* @{
+    ViewData["Title"] = "Welcome";
+} *@
+
+<div class="container mt-5">
+
+    <!-- Header Section -->
+    <div class="row align-items-center mb-5">
+        <!-- Profile Picture Column -->
+        <div class="col-md-4 col-12 text-center mb-4 mb-md-0">
+            <img src="~/images/whatsapp image 2025-09-23 at 22.09.07_c21ab1d3.jpg"
+                 alt="Ziyanda Mnqwazi"
+                 class="img-fluid rounded-circle shadow profile-photo" />
+        </div>
+
+        <!-- Text Column -->
+        <div class="col-md-8 col-12 text-md-start text-center">
+            <h1 class="display-4 header-title">Hi, I'm <span class="pink-accent">Ziyanda Mnqwazi</span></h1>
+
+            <p class="lead intro-text">
+                Final year <span class="pink-accent">Advanced Diploma</span> student in Information Technology,
+                specializing in <span class="pink-accent">Software Development</span>.
+                Passionate about <span class="pink-accent">Data Analysis</span>,
+                <span class="pink-accent">Business Analysis</span>,
+                <span class="pink-accent">Software Testing</span>, and
+                <span class="pink-accent">Front-End Development</span>.
+            </p>
+
+            <div class="social-icons mt-3">
+                <a href="https://linkedin.com/in/ziyanda-mnqwazi-4439782a0" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin fa-2x"></i>
+                </a>
+                <a href="https://github.com/ZiyandaMnqwazi" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                    <i class="fab fa-github fa-2x"></i>
+                </a>
+            </div>
+
+            <p class="intro-text mt-3">
+                Skilled in Python, JavaScript, C#, SQL, Power BI, and more.
+                I love creating solutions driven by data and clean code.
+            </p>
+
+            <a href="/Projects" class="btn btn-pink btn-lg mt-3">View My Projects</a>
+        </div>
+    </div>
+
+    <!-- Skills Section -->
+    <section class="mt-5">
+        <h2 class="text-center mb-4 section-title">Technical Skills</h2>
+        <div class="row justify-content-center">
+            @foreach (var skill in new[] {
+                        new { Name = "Python", Tooltip = "Beginner proficiency in Python programming." },
+                        new { Name = "JavaScript", Tooltip = "Semi-experienced with JavaScript for front-end and back-end." },
+                        new { Name = "Power BI", Tooltip = "Skilled in data visualization using Power BI." },
+                        new { Name = "SQL", Tooltip = "Strong SQL querying and database design skills." },
+                        new { Name = "C#", Tooltip = "Developed applications using C# and .NET." },
+                        new { Name = "Dapper", Tooltip = "Lightweight ORM for efficient database access." },
+                        new { Name = "HTML & CSS", Tooltip = "Good grasp of web markup and styling." },
+                        new { Name = "Git & GitHub", Tooltip = "Version control and collaboration using Git and GitHub." }
+                        })
+            {
+                <div class="col-md-3 col-6 mb-3" data-aos="fade-up" data-bs-toggle="tooltip" data-bs-placement="top" title="@skill.Tooltip">
+                    <div class="card skill-card p-3 text-center shadow-sm">
+                        <h5>@skill.Name</h5>
+                    </div>
+                </div>
+            }
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="mt-5 pb-5">
+        <div class="row">
+            <div class="col-lg-6 about-me mb-4 mb-lg-0">
+                <h2 class="pink-accent">Let's Connect & Create</h2>
+                <p>
+                    I’m passionate about bringing ideas to life with elegant, clean code and meaningful user experiences.
+                </p>
+                <p>
+                    With a focus on Software Development and a love for data-driven solutions, I’m excited to collaborate on projects that make a difference.
+                </p>
+                <p>
+                    Whether you have a question, an opportunity, or just want to say hello — I’d love to hear from you!
+                </p>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="contact-card">
+                    <h2 class="pink-accent mb-4">Send Me a Message</h2>
+
+                    <form asp-action="ContactForm" method="post" novalidate>
+                        <div class="mb-3">
+                            <label for="name" class="form-label pink-accent">Your Name</label>
+                            <input type="text" name="name" class="form-control" placeholder="Enter your lovely name" required />
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label pink-accent">Your Email</label>
+                            <input type="email" name="email" class="form-control" placeholder="Your email, please 💌" required />
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label pink-accent">Your Message</label>
+                            <textarea name="message" class="form-control" rows="5" placeholder="Write me something sweet..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn-pink">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

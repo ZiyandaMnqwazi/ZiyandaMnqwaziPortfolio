@@ -1,0 +1,122 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Ziyanda Mnqwazi | Software Developer Portfolio</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+    <link href="~/css/site.css" rel="stylesheet" asp-append-version="true" />
+    <link href="~/ZiyandaMnqwaziPortfolio.styles.css" rel="stylesheet" asp-append-version="true" />
+    <link href="~/css/main.css" rel="stylesheet" />
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm custom-navbar border-bottom box-shadow mb-5">
+            <div class="container-fluid custom-navbar-container">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Ziyanda Mnqwazi's Portfolio</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="#contact">Contact Me</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-controller="Projects" asp-action="Index">Projects</a>
+                        </li>
+                    </ul>
+                    <div class="d-none d-sm-flex align-items-center social-icons">
+                        <a href="https://linkedin.com/in/ziyanda-mnqwazi-4439782a0" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin fa-lg mx-2"></i>
+                        </a>
+                        <a href="https://github.com/ZiyandaMnqwazi" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                            <i class="fab fa-github fa-lg mx-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="footer mt-auto py-3 custom-footer">
+        <div class="container text-center">
+            <span class="text-muted">© 2025 Ziyanda Mnqwazi | Built with 💖 using ASP.NET & Dapper</span>
+        </div>
+    </footer>
+
+    <!-- Toast container -->
+    <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 1100">
+        <div id="contactToast" class="toast align-items-center text-bg-pink border-0" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="d-flex">
+                <div class="toast-body">
+                    <!-- Toast message will be set dynamically -->
+                </div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+        </div>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Enable Bootstrap tooltips
+            var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+            var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+                return new bootstrap.Tooltip(tooltipTriggerEl);
+            });
+
+            // Initialize AOS animations
+            AOS.init({
+                duration: 800,
+                easing: 'ease-in-out',
+                once: true,
+            });
+
+            // Show toast if TempData["Message"] or TempData["Error"] exists
+            @if (TempData["Message"] != null)
+            {
+                    <text>
+                    var toastEl = document.getElementById('contactToast');
+                    toastEl.querySelector('.toast-body').textContent = '@TempData["Message"]';
+                    var toast = new bootstrap.Toast(toastEl);
+                    toast.show();
+                    </text>
+            }
+            else if (TempData["Error"] != null)
+            {
+                    <text>
+                    var toastEl = document.getElementById('contactToast');
+                    toastEl.querySelector('.toast-body').textContent = '@TempData["Error"]';
+                    var toast = new bootstrap.Toast(toastEl);
+                    toast.show();
+                    </text>
+            }
+        });
+    </script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+
+</body>
+</html>

@@ -1,0 +1,279 @@
+﻿html {
+    scroll-behavior: smooth;
+}
+
+/* GENERAL STYLES */
+body {
+    font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9f9f9;
+    color: #444;
+    margin: 0;
+    padding: 0;
+}
+
+/* CONTAINER ADJUSTMENTS */
+/*.container {
+    max-width: 960px;
+    margin: auto;
+    padding: 2rem 1rem;
+}*/
+
+/* NAVBAR STYLING */
+
+.custom-navbar {
+    background-color: #ffe6f0;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    color: #d63384 !important;
+    font-size: 1.4rem;
+}
+
+/* Navbar Links - Bigger, Pink, spaced with underline animation */
+/* Center navbar nav items on desktop */
+.navbar-nav {
+    justify-content: center !important; /* Center the nav links */
+    flex-grow: 0 !important; /* Prevent nav from growing full width */
+}
+
+/* Adjust container-fluid in navbar to limit width and center */
+.custom-navbar-container {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+/* Toast pink background */
+.text-bg-pink {
+    background-color: #e91e63 !important;
+    color: white !important;
+}
+
+
+.navbar-nav .nav-link {
+    font-size: 1.1rem;
+    color: #d63384 !important;
+    font-weight: 600;
+    margin-left: 20px;
+    transition: color 0.3s ease, text-decoration-color 0.3s ease;
+    position: relative;
+    cursor: pointer;
+}
+
+    .navbar-nav .nav-link:first-child {
+        margin-left: 0;
+    }
+
+    .navbar-nav .nav-link::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: -4px;
+        left: 0;
+        background-color: #d63384;
+        transition: width 0.3s ease;
+        border-radius: 1px;
+    }
+
+    .navbar-nav .nav-link:hover::after,
+    .navbar-nav .nav-link:focus::after {
+        width: 100%;
+    }
+
+    .navbar-nav .nav-link:hover,
+    .navbar-nav .nav-link:focus {
+        color: #a12d66 !important;
+    }
+
+/* HERO SECTION */
+.profile-photo {
+    max-width: 320px;
+    border-radius: 50%;
+    box-shadow: 0 8px 25px rgba(233, 30, 99, 0.25);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+    .profile-photo:hover {
+        transform: scale(1.05);
+        box-shadow: 0 12px 35px rgba(233, 30, 99, 0.5);
+    }
+
+.header-title {
+    font-weight: 700;
+    font-size: 3.5rem;
+    margin-bottom: 0.3rem;
+    line-height: 1.1;
+}
+
+.pink-accent {
+    color: #e91e63;
+    font-weight: 600;
+}
+
+.intro-text {
+    font-size: 1.15rem;
+    margin-bottom: 1.2rem;
+    line-height: 1.5;
+}
+
+/* BUTTONS */
+.btn-pink {
+    background-color: #e91e63;
+    color: white;
+    font-weight: 600;
+    padding: 0.7rem 1.5rem;
+    border: none;
+    border-radius: 6px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+}
+
+    .btn-pink:hover,
+    .btn-pink:focus {
+        background-color: #ad1457;
+        transform: scale(1.05);
+        box-shadow: 0 6px 20px rgba(173, 20, 87, 0.6);
+        outline: 3px solid #ad1457;
+        outline: 3px;
+    }
+
+/* SOCIAL ICONS */
+.social-icons a {
+    margin-right: 15px;
+    color: #e91e63;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+    .social-icons a:hover {
+        color: #ad1457;
+        transform: scale(1.1);
+        text-decoration: none;
+    }
+
+/* SKILL CARDS */
+.skill-card {
+    border: 1px solid #f8bbd0;
+    background-color: #fff0f6;
+    border-radius: 8px;
+    padding: 1rem;
+    transition: box-shadow 0.3s ease;
+}
+
+    .skill-card:hover {
+        box-shadow: 0 8px 20px rgba(233, 30, 99, 0.3);
+    }
+
+/* ABOUT SECTION */
+.about-me {
+    font-size: 1.1rem;
+    color: #555;
+    padding-right: 3rem;
+}
+
+/* CONTACT SECTION */
+#contact {
+    margin-top: 5rem;
+}
+
+.contact-card {
+    background-color: #fff0f6;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(233, 30, 99, 0.15);
+}
+
+    .contact-card label {
+        color: #e91e63;
+        font-weight: 600;
+    }
+
+    .contact-card input.form-control,
+    .contact-card textarea.form-control {
+        border: 2px solid #f06292;
+        border-radius: 8px;
+        padding: 0.7rem 1rem;
+        transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+        .contact-card input.form-control:focus,
+        .contact-card textarea.form-control:focus {
+            border-color: #ad1457;
+            box-shadow: 0 0 10px rgba(173, 20, 87, 0.6);
+            outline: none;
+        }
+
+/* FOOTER */
+.custom-footer {
+    background-color: #fbe4ec;
+    padding: 1.2rem 0;
+    text-align: center;
+    color: #6c757d;
+    font-size: 0.95rem;
+    margin-top: 3rem;
+    border-top: 1px solid #f8bbd0;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 991px) {
+    .about-me {
+        padding-right: 0;
+        margin-bottom: 2rem;
+    }
+
+    .profile-photo {
+        max-width: 280px;
+        height:auto;
+    }
+
+    .header-title {
+        font-size: 3rem;
+    }
+
+    .navbar-nav {
+        text-align: center;
+    }
+
+        .navbar-nav .nav-link {
+            margin: 10px 0;
+        }
+}
+.tooltip-inner {
+    background-color: #e91e63 !important; /* Your pink accent color */
+    color: white !important;
+    font-weight: 600;
+    font-size: 0.9rem;
+    border-radius: 0.25rem;
+}
+
+.tooltip.bs-tooltip-top .arrow::before {
+    border-top-color: #e91e63 !important; /* Pink arrow on top */
+}
+
+.tooltip.bs-tooltip-bottom .arrow::before {
+    border-bottom-color: #e91e63 !important;
+}
+
+.tooltip.bs-tooltip-start .arrow::before {
+    border-left-color: #e91e63 !important;
+}
+
+.tooltip.bs-tooltip-end .arrow::before {
+    border-right-color: #e91e63 !important;
+}
+.bg-pink {
+    background-color: #e91e63 !important;
+}
+/* Pink table header */
+.table-pink {
+    background-color: #e91e63;
+}
+
+/* Project table row hover effect */
+.project-table tbody tr:hover {
+    background-color: #fff0f6;
+    transition: background-color 0.3s ease;
+}
