@@ -9,6 +9,10 @@ builder.Services.AddScoped<ISqlDataAccess, SqlDataAccess>();
 builder.Services.AddScoped<IProjectRepository, ProjectRepository>();
 builder.Services.AddTransient<IEmailService, EmailService>();
 
+builder.Configuration
+    .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
+    .AddUserSecrets<Program>();  // <- This loads user secrets in dev
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
