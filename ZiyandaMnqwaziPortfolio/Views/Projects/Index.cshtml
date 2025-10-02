@@ -3,43 +3,33 @@
 <section class="my-5">
     <h2 class="text-center mb-4 pink-accent fw-bold">My Projects</h2>
 
-    <div class="table-responsive">
-        <table class="table table-bordered table-hover project-table">
-            <thead class="table-pink text-white">
-                <tr>
-                    <th>Title</th>
-                    <th>Description</th>
-                    <th>Tools Used</th>
-                    <th>GitHub</th>
-                    <th>Live Site</th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach (var project in Model)
-                {
-                    <tr>
-                        <td class="fw-semibold">@project.Title</td>
-                        <td>@project.Description</td>
-                        <td>@project.ToolsUsed</td>
-                        <td>
-                            @if (!string.IsNullOrEmpty(project.GitHubLink))
-                            {
-                                <a href="@project.GitHubLink" target="_blank" class="btn btn-sm btn-outline-dark">
-                                    <i class="fab fa-github me-1"></i> GitHub
-                                </a>
-                            }
-                        </td>
-                        <td>
-                            @if (!string.IsNullOrEmpty(project.LiveLink))
-                            {
-                                <a href="@project.LiveLink" target="_blank" class="btn btn-sm btn-pink">
-                                    <i class="fas fa-external-link-alt me-1"></i> View Site
-                                </a>
-                            }
-                        </td>
-                    </tr>
-                }
-            </tbody>
-        </table>
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+        @foreach (var project in Model)
+        {
+            <div class="col">
+                <div class="project-card card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title pink-accent fw-bold">@project.Title</h5>
+                        <p class="card-text">@project.Description</p>
+                        <p><strong>Tools:</strong> @project.ToolsUsed</p>
+                    </div>
+                    <div class="card-footer d-flex gap-2 flex-wrap">
+                        @if (!string.IsNullOrEmpty(project.GitHubLink))
+                        {
+                            <a href="@project.GitHubLink" target="_blank" class="btn btn-sm btn-outline-dark">
+                                <i class="fab fa-github me-1"></i> GitHub
+                            </a>
+                        }
+
+                        @if (!string.IsNullOrEmpty(project.LiveLink))
+                        {
+                            <a href="@project.LiveLink" target="_blank" class="btn btn-sm btn-pink">
+                                <i class="fas fa-external-link-alt me-1"></i> View Live
+                            </a>
+                        }
+                    </div>
+                </div>
+            </div>
+        }
     </div>
 </section>

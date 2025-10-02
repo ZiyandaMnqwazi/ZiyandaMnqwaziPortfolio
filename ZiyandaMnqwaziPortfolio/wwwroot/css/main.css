@@ -277,3 +277,28 @@ body {
     background-color: #fff0f6;
     transition: background-color 0.3s ease;
 }
+/* PROJECT CARD STYLING */
+.project-card {
+    background-color: #fff0f6; /* Soft pink background */
+    border: 1px solid #f8bbd0; /* Light pink border */
+    border-radius: 12px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 12px rgba(233, 30, 99, 0.05);
+}
+
+    .project-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(233, 30, 99, 0.2);
+    }
+
+    .project-card .card-title {
+        font-size: 1.25rem;
+        margin-bottom: 0.6rem;
+    }
+
+    .project-card .card-footer {
+        background-color: transparent;
+        border-top: none;
+        padding-top: 0;
+        padding-bottom: 1rem;
+    }
