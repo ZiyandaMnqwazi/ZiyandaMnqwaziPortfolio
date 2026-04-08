@@ -1,114 +1,521 @@
-﻿@* @{
+﻿@{
     ViewData["Title"] = "Welcome";
-} *@
+}
 
-<div class="container mt-5">
+<!-- ═══ HERO ═══════════════════════════════════════════ -->
+<section class="hero-section full-bleed">
+    <div class="container">
+        <div class="hero-inner">
 
-    <!-- Header Section -->
-    <div class="row align-items-center mb-5">
-        <!-- Profile Picture Column -->
-        <div class="col-md-4 col-12 text-center mb-4 mb-md-0">
-            <img src="~/images/whatsapp image 2025-09-23 at 22.09.07_c21ab1d3.jpg"
-                 alt="Ziyanda Mnqwazi"
-                 class="img-fluid rounded-circle shadow profile-photo" />
-        </div>
+            <div>
+                <span class="hero-tag">Digital Analytics Intern</span>
 
-        <!-- Text Column -->
-        <div class="col-md-8 col-12 text-md-start text-center">
-            <h1 class="display-4 header-title">Hi, I'm <span class="pink-accent">Ziyanda Mnqwazi</span></h1>
+                <h1 class="hero-name">
+                    <span class="greeting">Hi, I'm</span>
+                    <span class="name">Ziyanda Mnqwazi</span>
+                </h1>
 
-            <p class="lead intro-text">
-                Final year <span class="pink-accent">Advanced Diploma</span> student in Information Technology,
-                specializing in <span class="pink-accent">Software Development</span>.
-                Passionate about <span class="pink-accent">Data Analysis</span>,
-                <span class="pink-accent">Business Analysis</span>,
-                <span class="pink-accent">Software Testing</span>, and
-                <span class="pink-accent">Front-End Development</span>.
-            </p>
+                <p class="hero-sub">
+                    Data &amp; Tech — <strong>both sides of the product</strong>
+                </p>
 
-            <div class="social-icons mt-3">
-                <a href="https://linkedin.com/in/ziyanda-mnqwazi-4439782a0" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                    <i class="fab fa-linkedin fa-2x"></i>
-                </a>
-                <a href="https://github.com/ZiyandaMnqwazi" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                    <i class="fab fa-github fa-2x"></i>
-                </a>
+                <p class="hero-desc">
+                    IT graduate from Nelson Mandela University. Day-to-day I'm setting
+                    up tracking in GTM, digging into user behaviour in GA4, and building
+                    dashboards in Looker Studio. My background is in software development,
+                    so I think in systems — comfortable with how something is built
+                    and how people use it. Still building. Always curious.
+                </p>
+
+                <div class="hero-ctas">
+                    <a href="/Projects" class="btn-hero-primary">
+                        <i class="fas fa-folder-open"></i>
+                        View My Projects
+                    </a>
+                    <a href="/files/ziyanda_mnqwazi_cv.pdf" class="btn-hero-ghost" download>
+                        <i class="fas fa-file-download"></i>
+                        Download CV
+                    </a>
+                </div>
+
+                <div class="hero-socials">
+                    <a href="https://linkedin.com/in/ziyanda-mnqwazi-4439782a0"
+                       target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/ZiyandaMnqwazi"
+                       target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
             </div>
 
-            <p class="intro-text mt-3">
-                Skilled in Python, JavaScript, C#, SQL, Power BI, and more.
-                I love creating solutions driven by data and clean code.
-            </p>
-
-            <a href="/Projects" class="btn btn-pink btn-lg mt-3">View My Projects</a>
-            <a href="/files/ziyanda_mnqwazi_cv.pdf" class="btn btn-pink btn-lg mt-3" download>
-                <i class="fas fa-file-download me-1"></i> Download My CV
-            </a>
+            <div class="hero-photo-wrap">
+                <div class="hero-photo-glow"></div>
+                <div class="hero-photo-ring"></div>
+                <img src="~/images/whatsapp image 2025-09-23 at 22.09.07_c21ab1d3.jpg"
+                     alt="Ziyanda Mnqwazi — Digital Analytics Intern" />
+            </div>
 
         </div>
     </div>
+</section>
 
-    <!-- Skills Section -->
-    <section class="mt-5">
-        <h2 class="text-center mb-4 section-title">Technical Skills</h2>
-        <div class="row justify-content-center">
-            @foreach (var skill in new[] {
-                        new { Name = "Python", Tooltip = "Beginner proficiency in Python programming." },
-                        new { Name = "JavaScript", Tooltip = "Semi-experienced with JavaScript for front-end and back-end." },
-                        new { Name = "Power BI", Tooltip = "Skilled in data visualization using Power BI." },
-                        new { Name = "SQL", Tooltip = "Strong SQL querying and database design skills." },
-                        new { Name = "C#", Tooltip = "Developed applications using C# and .NET." },
-                        new { Name = "Dapper", Tooltip = "Lightweight ORM for efficient database access." },
-                        new { Name = "HTML & CSS", Tooltip = "Good grasp of web markup and styling." },
-                        new { Name = "Git & GitHub", Tooltip = "Version control and collaboration using Git and GitHub." }
-                        })
-            {
-                <div class="col-md-3 col-6 mb-3" data-aos="fade-up" data-bs-toggle="tooltip" data-bs-placement="top" title="@skill.Tooltip">
-                    <div class="card skill-card p-3 text-center shadow-sm">
-                        <h5>@skill.Name</h5>
-                    </div>
-                </div>
-            }
-        </div>
-    </section>
+<!-- ═══ ABOUT SNIPPET ══════════════════════════════════ -->
+<section class="about-snippet" id="about">
+    <div class="row g-5 align-items-center">
 
-    <!-- Contact Section -->
-    <section id="contact" class="mt-5 pb-5">
-        <div class="row">
-            <div class="col-lg-6 about-me mb-4 mb-lg-0">
-                <h2 class="pink-accent">Let's Connect & Create</h2>
-                <p>
-                    I’m passionate about bringing ideas to life with elegant, clean code and meaningful user experiences.
-                </p>
-                <p>
-                    With a focus on Software Development and a love for data-driven solutions, I’m excited to collaborate on projects that make a difference.
-                </p>
-                <p>
-                    Whether you have a question, an opportunity, or just want to say hello — I’d love to hear from you!
-                </p>
+        <div class="col-lg-6" data-aos="fade-up">
+            <span class="section-eyebrow">About me</span>
+            <h2 class="section-heading">Quiet until spoken to.<br><em>Bubbly once you do.</em></h2>
+            <p class="snippet-body">
+                I'm a 28-year-old IT graduate from Nelson Mandela University holding a
+                Higher Certificate in IT, a Diploma in Software Development, and an
+                <strong>Advanced Diploma in Software Development, which I completed cum laude</strong>.
+                Currently finding my voice in the data analytics space as a Digital Analytics
+                Intern in Cape Town.
+            </p>
+            <p class="snippet-body">
+                For five years at university I walked in, listened, and walked out.
+                My classmates thought I was stuck up. I wasn't, I was just
+                <strong>paying attention</strong>. Tech has an unspoken rule that you
+                have to be loud to be noticed. I'm learning to work around that,
+                one GTM tag at a time.
+            </p>
+            <p class="snippet-body">
+                I'm drawn to work that sits at the intersection of data, tech and
+                real problem-solving. I think in systems. I value honesty, kindness
+                and curiosity above everything. <strong>Still building. Always curious.</strong>
+            </p>
+
+            <div class="snippet-values">
+                <span class="snippet-value-chip"> Honesty</span>
+                <span class="snippet-value-chip"> Kindness</span>
+                <span class="snippet-value-chip"> Joy</span>
+                <span class="snippet-value-chip"> Curiosity</span>
             </div>
 
-            <div class="col-lg-6">
-                <div class="contact-card">
-                    <h2 class="pink-accent mb-4">Send Me a Message</h2>
+            <a href="https://linkedin.com/in/ziyanda-mnqwazi-4439782a0"
+               target="_blank" rel="noopener noreferrer"
+               class="snippet-linkedin-link">
+                <i class="fab fa-linkedin me-2"></i>
+                Connect on LinkedIn
+            </a>
+        </div>
 
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="snippet-timeline">
+
+                <div class="snippet-tl-item">
+                    <div class="snippet-tl-dot"></div>
+                    <div>
+                        <p class="snippet-tl-year">2021</p>
+                        <p class="snippet-tl-title">Higher Certificate in IT</p>
+                        <p class="snippet-tl-sub">IT User Support Services  · Nelson Mandela University</p>
+                    </div>
+                </div>
+
+                <div class="snippet-tl-item">
+                    <div class="snippet-tl-dot"></div>
+                    <div>
+                        <p class="snippet-tl-year">2022</p>
+                        <p class="snippet-tl-title">Diploma in IT</p>
+                        <p class="snippet-tl-sub">Software Development · Nelson Mandela University</p>
+                    </div>
+                </div>
+
+                <div class="snippet-tl-item">
+                    <div class="snippet-tl-dot"></div>
+                    <div>
+                        <p class="snippet-tl-year">2024</p>
+                        <p class="snippet-tl-title">Advanced Diploma in IT</p>
+                        <p class="snippet-tl-sub">Software Development · Nelson Mandela University</p>
+                    </div>
+                </div>
+
+                <div class="snippet-tl-item gold">
+                    <div class="snippet-tl-dot"></div>
+                    <div>
+                        <p class="snippet-tl-year">Now</p>
+                        <p class="snippet-tl-title">Digital Analytics Intern</p>
+                        <p class="snippet-tl-sub">GA4 · GTM · Looker Studio · Cape Town</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- ═══ WHAT I DO ══════════════════════════════════════ -->
+<section class="what-section">
+    <span class="section-eyebrow">What I do</span>
+    <h2 class="section-heading">I work where data meets product</h2>
+
+    <div class="row g-4">
+        @foreach (var area in new[] {
+                new {
+                Icon  = "fas fa-tags",
+                Title = "Tracking & Analytics",
+                Desc  = "Setting up and auditing tracking in Google Tag Manager, analysing user behaviour in GA4, and making sure the data going in is actually trustworthy."
+                },
+                new {
+                Icon  = "fas fa-chart-bar",
+                Title = "Dashboards & Reporting",
+                Desc  = "Building Looker Studio and Power BI dashboards that don't just display numbers — they answer the questions stakeholders are actually asking."
+                },
+                new {
+                Icon  = "fas fa-code",
+                Title = "Development & UX",
+                Desc  = "Crossing into web development in C#, Python and JavaScript, with UX thinking through wireframing and Balsamiq. I understand how data lives inside a product, not just how to report on it from the outside."
+                }
+                })
+        {
+            <div class="col-md-4" data-aos="fade-up">
+                <div class="do-card">
+                    <div class="do-card-icon">
+                        <i class="@area.Icon"></i>
+                    </div>
+                    <p class="do-card-title">@area.Title</p>
+                    <p class="do-card-desc">@area.Desc</p>
+                </div>
+            </div>
+        }
+    </div>
+</section>
+
+<!-- ═══ SKILLS ═════════════════════════════════════════ -->
+<section class="skills-section full-bleed">
+    <div class="container">
+        <span class="section-eyebrow">Skills</span>
+        <h2 class="section-heading light">My technical toolkit</h2>
+
+        <div class="row g-5">
+            <div class="col-md-6" data-aos="fade-up">
+                <span class="skills-col-label">Analytics &amp; Data</span>
+                @foreach (var s in new[] {
+                                "Google Analytics 4 (GA4)",
+                                "Google Tag Manager (GTM)",
+                                "Looker Studio",
+                                "Power BI",
+                                "SQL",
+                                "Data Visualisation"
+                                })
+                {
+                    <span class="skill-pill gold">
+                        <span class="dot"></span>@s
+                    </span>
+                }
+            </div>
+
+            <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+                <span class="skills-col-label">Development &amp; Design</span>
+                @foreach (var s in new[] {
+                                "C# & .NET",
+                                "Python",
+                                "JavaScript",
+                                "HTML & CSS",
+                                "Dapper ORM",
+                                "Git & GitHub",
+                                "UX & Wireframing",
+                                "Balsamiq"
+                                })
+                {
+                    <span class="skill-pill">
+                        <span class="dot"></span>@s
+                    </span>
+                }
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══ CERTIFICATES ════════════════════════════════════ -->
+<section class="certs-section" id="certificates">
+    <span class="section-eyebrow">Certified</span>
+    <h2 class="section-heading">Qualifications &amp; credentials</h2>
+
+    <!-- Cum Laude Banner -->
+    <div class="cumlaude-banner" data-aos="fade-up">
+        <div class="cumlaude-icon">🏅</div>
+        <div class="cumlaude-text">
+            <h3>Advanced Diploma in IT — Cum Laude</h3>
+            <p>
+                Software Development · Nelson Mandela University ·
+                Graduated with distinction
+            </p>
+        </div>
+    </div>
+
+    <!-- Certificate Cards -->
+    <div class="certs-grid">
+
+        <!-- GA4 Certification — main one -->
+        <div class="cert-card" data-aos="fade-up">
+            <div class="cert-card-top">
+                <div class="cert-icon google">
+                    <i class="fab fa-google" style="color:#EA4335;"></i>
+                </div>
+                <div class="cert-card-meta">
+                    <p class="cert-title">Google Analytics Certification</p>
+                    <p class="cert-issuer">Issued by <span>Google Skillshop</span> · GA4</p>
+                </div>
+            </div>
+            <span class="cert-badge verified">Verified</span>
+            <a href="https://skillshop.credential.net/51df2eb3-143e-4577-b65a-a66347950957"
+               target="_blank" rel="noopener noreferrer"
+               class="cert-verify-btn">
+                <i class="fas fa-external-link-alt"></i>
+                Verify credential
+            </a>
+        </div>
+
+        <!-- Get Started Using GA -->
+        <div class="cert-card" data-aos="fade-up" data-aos-delay="80">
+            <div class="cert-card-top">
+                <div class="cert-icon skillshop">
+                    <i class="fab fa-google" style="color:#34a853;"></i>
+                </div>
+                <div class="cert-card-meta">
+                    <p class="cert-title">Get Started Using Google Analytics</p>
+                    <p class="cert-issuer">Issued by <span>Google Skillshop</span> · GA4</p>
+                </div>
+            </div>
+            <span class="cert-badge verified">Verified</span>
+            <a href="https://skillshop.credential.net/3e39dec5-47ad-4163-8a7f-213b5a8adce4"
+               target="_blank" rel="noopener noreferrer"
+               class="cert-verify-btn">
+                <i class="fas fa-external-link-alt"></i>
+                Verify credential
+            </a>
+        </div>
+
+        <!-- Manage GA4 Data -->
+        <div class="cert-card" data-aos="fade-up" data-aos-delay="120">
+            <div class="cert-card-top">
+                <div class="cert-icon skillshop">
+                    <i class="fab fa-google" style="color:#34a853;"></i>
+                </div>
+                <div class="cert-card-meta">
+                    <p class="cert-title">Manage GA4 Data &amp; Read Reports</p>
+                    <p class="cert-issuer">Issued by <span>Google Skillshop</span> · GA4</p>
+                </div>
+            </div>
+            <span class="cert-badge verified">Verified</span>
+            <a href="https://skillshop.credential.net/2d1f7094-298e-479b-81e6-81d50a41473f"
+               target="_blank" rel="noopener noreferrer"
+               class="cert-verify-btn">
+                <i class="fas fa-external-link-alt"></i>
+                Verify credential
+            </a>
+        </div>
+
+        <!-- GTM Coursera — coming soon -->
+        <div class="cert-card coming-soon" data-aos="fade-up" data-aos-delay="160">
+            <div class="cert-card-top">
+                <div class="cert-icon coursera">
+                    <i class="fas fa-graduation-cap" style="color:#0056D2;"></i>
+                </div>
+                <div class="cert-card-meta">
+                    <p class="cert-title">Google Tag Manager Certification</p>
+                    <p class="cert-issuer">Issued by <span>Coursera</span> · GTM</p>
+                </div>
+            </div>
+            <span class="cert-badge pending">Verification coming soon</span>
+            <span class="cert-verify-btn disabled">
+                <i class="fas fa-clock"></i>
+                Link updating soon
+            </span>
+        </div>
+
+    </div>
+</section>
+
+<!-- ═══ PROJECTS ════════════════════════════════════════ -->
+<section class="projects-section full-bleed" id="projects">
+    <div class="container">
+
+        <span class="section-eyebrow">Projects</span>
+        <h2 class="section-heading light">Things I have built</h2>
+
+        <div class="projects-grid">
+
+            <!-- Mental Wellness Dashboard — featured, full width -->
+            <div class="project-card featured solo" data-aos="fade-up">
+
+                <div class="project-content">
+                    <div class="project-card-icon gold">
+                        <i class="fas fa-chart-pie"></i>
+                    </div>
+                    <p class="project-title">
+                        Mental Wellness &amp; Screentime Dashboard
+                    </p>
+                    <p class="project-desc">
+                        Analysed relationships between screentime, mental wellness
+                        and lifestyle habits across different age groups, genders
+                        and working environments. Used Python for data cleaning
+                        and Power BI for interactive visualisation — covering
+                        sleep patterns, stress levels, physical activity and
+                        productivity. Built in two dashboard pages: Screentime
+                        &amp; Activity, and Wellness &amp; Lifestyle.
+                    </p>
+                    <div class="project-tools">
+                        <span class="project-tool-tag">Python</span>
+                        <span class="project-tool-tag">Pandas</span>
+                        <span class="project-tool-tag">Seaborn</span>
+                        <span class="project-tool-tag">Power BI</span>
+                        <span class="project-tool-tag">VS Code</span>
+                        <span class="project-tool-tag">GitHub</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/ZiyandaMnqwazi"
+                           target="_blank" rel="noopener noreferrer"
+                           class="project-link-btn">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-preview">
+                    <img src="~/images/screenshot 2025-09-25 022022.png" />
+                         alt="Mental Wellness Dashboard — Screentime and Exercise Analysis" />
+                </div>
+
+            </div>
+
+            <!-- Ward Management System -->
+            <div class="project-card collab" data-aos="fade-up" data-aos-delay="80">
+                <div class="project-card-icon pink">
+                    <i class="fas fa-hospital"></i>
+                </div>
+                <p class="project-title">Ward Management System</p>
+                <p class="project-desc">
+                    A secure ward management system with 5 user roles — Admin,
+                    Doctor, Nurse, Script Manager and Consumable Manager.
+                    Built with ASP.NET MVC, Dapper ORM and SQL Server with a
+                    focus on clean role-based access and efficient hospital
+                    workflow management.
+                </p>
+                <div class="project-tools">
+                    <span class="project-tool-tag">C# ASP.NET MVC</span>
+                    <span class="project-tool-tag">Dapper ORM</span>
+                    <span class="project-tool-tag">SQL Server</span>
+                    <span class="project-tool-tag">Role-Based Access</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/ZiyandaMnqwazi/Ward-Management-System"
+                       target="_blank" rel="noopener noreferrer"
+                       class="project-link-btn">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                </div>
+            </div>
+
+            <!-- Pharmacy Management System -->
+            <div class="project-card collab" data-aos="fade-up" data-aos-delay="120">
+                <div class="project-card-icon teal">
+                    <i class="fas fa-pills"></i>
+                </div>
+                <p class="project-title">Pharmacy Management System</p>
+                <p class="project-desc">
+                    A web-based pharmacy system supporting prescription uploads,
+                    medication ordering and stock management. Features role-based
+                    access for Managers, Pharmacists and Customers — enabling
+                    efficient prescription dispensing, medication tracking and
+                    improved pharmacy workflow.
+                </p>
+                <div class="project-tools">
+                    <span class="project-tool-tag">Web-Based</span>
+                    <span class="project-tool-tag">Role-Based Access</span>
+                    <span class="project-tool-tag">Stock Management</span>
+                    <span class="project-tool-tag">Prescription Tracking</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/ZiyandaMnqwazi/Pharmacy-Management-System"
+                       target="_blank" rel="noopener noreferrer"
+                       class="project-link-btn">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <p style="text-align:center; margin-top: 40px; font-size: 0.82rem;
+                  color: rgba(247,240,244,0.25);">
+            More projects in progress — including real GTM &amp; GA4
+            implementations from my internship.
+        </p>
+
+    </div>
+</section>
+<!-- ═══ CONTACT ═════════════════════════════════════════ -->
+<section class="contact-section full-bleed" id="contact">
+    <div class="container">
+        <div class="row g-5 align-items-start">
+
+            <div class="col-lg-5" data-aos="fade-up">
+                <span class="section-eyebrow">Contact</span>
+                <h2 class="section-heading light">Let's talk data, tech, or both</h2>
+                <p class="contact-blurb">
+                    I'm drawn to work that sits at the intersection of
+                    <strong>data, tech and real problem-solving</strong>.
+                    If you're building something interesting or have a challenge
+                    that needs someone who thinks in systems let's talk.
+                </p>
+                <p class="contact-blurb mt-3">
+                    Open to opportunities in <strong>digital analytics</strong>,
+                    <strong>software development</strong>, and roles where
+                    the two overlap.
+                </p>
+                <div class="hero-socials mt-4">
+                    <a href="https://linkedin.com/in/ziyanda-mnqwazi-4439782a0"
+                       target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/ZiyandaMnqwazi"
+                       target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-7" data-aos="fade-up" data-aos-delay="100">
+                <div class="contact-form-card">
                     <form asp-action="ContactForm" method="post" novalidate>
-                        <div class="mb-3">
-                            <label for="name" class="form-label pink-accent">Your Name</label>
-                            <input type="text" name="name" class="form-control" placeholder="Enter your lovely name" required />
+
+                        <div class="mb-4">
+                            <label for="name" class="form-label">Your Name</label>
+                            <input type="text" id="name" name="name"
+                                   class="form-control"
+                                   placeholder="Enter your name" required />
                         </div>
-                        <div class="mb-3">
-                            <label for="email" class="form-label pink-accent">Your Email</label>
-                            <input type="email" name="email" class="form-control" placeholder="Your email, please 💌" required />
+
+                        <div class="mb-4">
+                            <label for="email" class="form-label">Your Email</label>
+                            <input type="email" id="email" name="email"
+                                   class="form-control"
+                                   placeholder="your@email.com" required />
                         </div>
-                        <div class="mb-3">
-                            <label for="message" class="form-label pink-accent">Your Message</label>
-                            <textarea name="message" class="form-control" rows="5" placeholder="Write me something sweet..." required></textarea>
+
+                        <div class="mb-4">
+                            <label for="message" class="form-label">Your Message</label>
+                            <textarea id="message" name="message"
+                                      class="form-control" rows="5"
+                                      placeholder="Tell me what you're working on..."
+                                      required></textarea>
                         </div>
-                        <button type="submit" class="btn-pink">Send Message</button>
+
+                        <button type="submit" class="btn-pink w-100">
+                            <i class="fas fa-paper-plane"></i>
+                            Send Message
+                        </button>
+
                     </form>
                 </div>
             </div>
+
         </div>
-    </section>
-</div>
+    </div>
+</section>
